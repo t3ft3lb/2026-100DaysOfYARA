@@ -18,5 +18,5 @@ rule ta_heraldwerewolf_telemos_backdoor_ps1
         uint8(0) == 0x24 and
         filesize > 2KB and filesize < 8KB and
         $s0 in (filesize - 25 .. filesize) and
-        $s1 and #s2 > 4 and $s2 in (@s1 .. filesize)
+        $s1 and #s2 in (@s1 .. filesize) > 4
 }
