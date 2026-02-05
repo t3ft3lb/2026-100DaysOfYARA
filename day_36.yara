@@ -5,9 +5,9 @@ rule ta_hoody_hyena_zeronetkit_backdoor
         author = "@t3ft3lb"
         date = "2026-02-05"
         reference = "https://securelist.ru/bo-team-upgrades-brockendoor-and-zeronetkit-backdoors/113536/"
-        hash1 = "10d0114dba15bf9b19b7ef5f03fbbeae236daa78ceae7a362d12c66cb708d4a5" // pe32+
-        hash2 = "a41e7083e6c53c02dc2e92dcfd830f32c4da5cca77cff11b0d258836b8216a40" // pe32+
-        hash3 = "aeef89818b2212a0b7154eaad28183120ae2a7b90a553b5f4354cd1d7a010598" // elf64
+        hash1 = "10d0114dba15bf9b19b7ef5f03fbbeae236daa78ceae7a362d12c66cb708d4a5" // PE32+
+        hash2 = "a41e7083e6c53c02dc2e92dcfd830f32c4da5cca77cff11b0d258836b8216a40" // PE32+
+        hash3 = "aeef89818b2212a0b7154eaad28183120ae2a7b90a553b5f4354cd1d7a010598" // ELF64
 
     strings:
         $go = "Go buildinf" ascii fullword
@@ -29,4 +29,5 @@ rule ta_hoody_hyena_zeronetkit_backdoor
         ) and
         filesize > 3MB and filesize < 6MB and
         $go and 6 of ($s*)
+
 }
