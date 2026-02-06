@@ -16,5 +16,5 @@ rule cve_2025_8088_winrar
 
     condition:
         uint32(0) == 0x21726152 and
-        #s0 > 3 and (#s1 > 3 or #s2 > 3)
+        $s0 and (#s1 > 2 or #s2 > 2)
 }
