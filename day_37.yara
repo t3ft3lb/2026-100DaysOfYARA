@@ -1,4 +1,4 @@
-    rule cve_2025_6218_winrar
+rule cve_2025_6218_winrar
 {
     meta:
         description = "Detects RAR archives with CVE-2025-6218"
