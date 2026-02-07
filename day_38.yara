@@ -16,7 +16,7 @@ rule ta_clumsy_werewolf_msc_downloader
         $s0 = "<String ID=\"14\" Refs=\"1\">http" ascii
         $s1 = ".html</String>" ascii
         $s2 = "{71E5B33E-1064-11D2-808F-0000F875A9CE}" ascii fullword
-        $s4 = "AQAAABQAAAAAAAAABgAAAP////8=" ascii fullword
+        $s3 = "AQAAABQAAAAAAAAABgAAAP////8=" ascii fullword
 
     condition:
         uint32(0) == 0x6D783F3C and
