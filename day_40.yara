@@ -17,7 +17,6 @@ rule ta_vortex_werewolf_initial_loader_lnk
         uint32(0) == 0x0000004C and uint32(4) == 0x00021401 and
         filesize > 1KB and filesize < 4KB and
         lnk.icon_location contains "Microsoft\\Edge\\Application\\msedge.exe" and
-        lnk.cmd_line_args contains "Expand-Archive" and
         lnk.cmd_line_args contains ".zip';" and
         lnk.cmd_line_args contains "gc $env:APPDATA\\" and
         lnk.cmd_line_args contains "Start-Process -WindowStyle Hidden powershell" and
