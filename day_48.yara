@@ -1,5 +1,3 @@
-import "dotnet"
-
 rule ta_cavalry_werewolf_foalshell_csharp
 {
     meta:
@@ -12,6 +10,8 @@ rule ta_cavalry_werewolf_foalshell_csharp
         hash2 = "ec80e96e3d15a215d59d1095134e7131114f669ebc406c6ea1a709003d3f6f17"
 
     strings:
+		$dotnet = ".NETFramework" ascii fullword
+
         $s0 = "Documents\\reverseShells\\Reverse-Shell-CS\\Payload\\Real_cli\\obj\\Release" ascii fullword
         $s1 = "$8923c4d9-3fbf-4cf3-8a63-c5102293b774" ascii fullword
         $s2 = "Progra33v" ascii fullword
@@ -23,6 +23,5 @@ rule ta_cavalry_werewolf_foalshell_csharp
     condition:
         uint16(0) == 0x5A4D and uint32(uint32(0x3C)) == 0x00004550 and
         filesize > 80KB and filesize < 150KB and
-        dotnet.is_dotnet and dotnet.number_of_streams == 5 and
-        any of ($s*) and $h
+        $dotnet and any of ($s*) and $h
 }
