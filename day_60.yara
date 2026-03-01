@@ -4,7 +4,7 @@ rule tool_wstunnel_gen
         description = "Detects Wstunnel tunneling tool"
         author = "@t3ft3lb"
         date = "2026-03-01"
-        reference_ = "https://github.com/erebe/wstunnel"
+        reference = "https://github.com/erebe/wstunnel"
         hash1 = "9dda789b85fce6294f91a79b7271a93de36dfcef21fc680dc2bf4235141e47df" // PE32+
         hash2 = "c2f6198fde46a064e7b1a703fbe4be3cc774bd29bbc738782eb5855492d18717" // ELF64
         hash3 = "4c8c5a32ae9899efc0a59fc705219ee0dcce38d09d4bb9f1e2425f713ecc7378" // Mach-O64
@@ -32,4 +32,5 @@ rule tool_wstunnel_gen
         ) and
         filesize > 7MB and filesize < 15MB and
         #rust > 10 and 6 of ($s*)
+
 }
