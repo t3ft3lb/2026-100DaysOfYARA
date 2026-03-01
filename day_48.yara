@@ -25,4 +25,3 @@ rule ta_cavalry_werewolf_foalshell_csharp
         filesize > 80KB and filesize < 150KB and
         $dotnet and any of ($s*) and $h
 }
-
