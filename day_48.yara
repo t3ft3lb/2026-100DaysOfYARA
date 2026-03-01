@@ -10,7 +10,7 @@ rule ta_cavalry_werewolf_foalshell_csharp
         hash2 = "ec80e96e3d15a215d59d1095134e7131114f669ebc406c6ea1a709003d3f6f17"
 
     strings:
-		$dotnet = ".NETFramework" ascii fullword
+        $dotnet = ".NETFramework" ascii fullword
 
         $s0 = "Documents\\reverseShells\\Reverse-Shell-CS\\Payload\\Real_cli\\obj\\Release" ascii fullword
         $s1 = "$8923c4d9-3fbf-4cf3-8a63-c5102293b774" ascii fullword
@@ -25,3 +25,4 @@ rule ta_cavalry_werewolf_foalshell_csharp
         filesize > 80KB and filesize < 150KB and
         $dotnet and any of ($s*) and $h
 }
+
