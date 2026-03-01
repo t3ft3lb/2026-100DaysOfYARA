@@ -32,5 +32,4 @@ rule tool_wstunnel_gen
         ) and
         filesize > 7MB and filesize < 15MB and
         #rust > 10 and 6 of ($s*)
-
 }
